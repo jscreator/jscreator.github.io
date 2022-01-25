@@ -17,7 +17,7 @@ const onFormSubmitted = (e) => {
     e.preventDefault();
 
     const input = document.querySelector('#chat')
-    const text = input.value;
+    const text = ("User: " + input.value);
     input.value = '';
 
     sock.emit('message', text);
